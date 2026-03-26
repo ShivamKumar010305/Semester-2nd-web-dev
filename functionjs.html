@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Function:block of code, used or defined to perform specific
+        //type of function
+        // normal function:-with para,without para and with deafult
+        //normal function without para....
+        function demo(){
+            console.log("Hello JS");
+        }
+        demo();//function calling
+
+        //with parameter 
+        function demo1(text){
+            console.log("Hello " + text);
+        }
+        demo1("React");
+        //deafult parameter
+        function add(a,b){
+            console.log("addition is "+(a+b));
+
+        }
+        add(123,124);
+         function add1(a,b=4){
+            console.log("addition is "+(a+b));
+
+        }
+        add(123);
+         function add2(a=4,b){
+            console.log("addition is "+(a+b));
+
+        }
+        //application
+        //synchronous
+        function cal(){
+            function add(a,b){
+                console.log(a+b);
+            }
+            function mul(a,b){
+                console.log(a*b);
+
+            }
+            function sub(a,b){
+                console.log(a-b);
+            }
+            add(4,5);
+            mul(3,4);
+            sub(9,7);
+        }    
+        cal();
+
+
+
+        //anonymus function- a function defined without a name or identifier, used for short-term, specific tasks where reusability is not required
+
+
+        let msg=function(){
+            console.log("Hello ABES");
+            //consol.log(typeof(msg));
+        }
+        msg();
+        //short code fro above function i.e arroe function
+        let msg1=()=>console.log("Hello ABESSS EC");
+        msg1();
+        //arrow function with multiple line 
+        let msg2=(a,b)=>{
+            var num1=a;
+            var num2=b;
+            var res=num1/num2;
+            console.log("Result is "+ res);
+
+        }
+        msg2(10,20);
+        //An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined. It is a design pattern used to create a private, local scope, preventing variables within it from polluting the global namespace
+        (function(){
+            console.log("Hello world");
+        })();
+        //short code for above function
+        (msg=>console.log("Hello world"));
+
+
+
+
+        //A Promise in JavaScript is an object representing the eventual completion (or failure) of an asynchronous operation and its resulting value. It provides a structured way to handle asynchronous code, such as fetching data from an API or reading files, avoiding the complex nesting associated with traditional callbacks (known as "callback hell"
+        
+
+        let Promise=new Promise(function);
+        let myPromise=new Promise(function(resolve,reject)){
+            let age =25;
+            if(age>=18){
+                resolve("valid age");
+            }
+            else{
+                reject("Wait for next year");
+            }
+        };
+        myPromise
+        .then(msg=>console.log(msg));
+        .catch(error>=console.log(error)
+        );
+        console.log(myPromise);
+
+        //async and await are special JavaScript keywords that allow developers to write asynchronous code in a way that looks and behaves like synchronous code, making it more readable and easier to manage than traditional promise chains or callbacks.
+
+
+
+        //JSON stands for JavaScript Object Notation.
+        //JSON is a plain text format for storing and transporting data.
+        //JSON is similar to the syntax for creating JavaScript objects.
+        //JSON is used to send, receive and store data.
+
+        //api......
+
+
+         let userData=fetch('https://dummyjson.com/products/1');
+        console.log(userData);
+
+        async function userInfo() {
+        try{
+            let userData = await fetch('http://api.github.com/users/ersanjeevsoni');
+            let respond=await userData.json();
+            console.log(respond);
+            
+        }//try end
+        catch(error){
+            console.log(error);
+        }
+        }
+       
+        userInfo();
+
+      
+    </script>
+    
+</body>
+</html>

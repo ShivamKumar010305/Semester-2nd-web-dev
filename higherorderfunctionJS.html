@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num=[4,6,7,8,10,12,14];
+        //map
+        let square=num.map(n=>n*n);
+        console.log(square);
+        //reduce
+        let sum=num.reduce((total,n)=>total+n);
+        console.log(sum);
+        //filter
+        let sorting=num.filter(n=>n>2);
+        console.log(sorting);
+        //foreach
+        num.forEach(n=>console.log(n*2))
+
+
+        //Local storage:-
+        let myInfo={
+            name:"Shivam Kumar",
+            mobile:"8445285876",
+            age:18,
+            class:"CSE-23",
+            dob:"9 dec 2005",
+        };
+        localStorage.setItem('myInfo',JSON.stringify(myInfo));
+        //retrieve item
+        let storeData=JSON.parse(localStorage.getItem('myInfo'));
+        console.log(storeData.name);
+        console.log(storeData);
+
+    </script>
+</body>
+</html>

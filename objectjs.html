@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //object
+        let student={
+            name:"John",
+            age:23,
+            isMarried:false,
+            address:{
+                State:"UP",
+                city:"Agra",
+                Pincode:282005
+            },
+            eduction:["10th","12th","B. tech"],
+            degree:"B. tech",
+            branch:"CSE",
+            year:2025,
+            getInfo:function(){
+                return "my currnent aducation is" + student.degree;
+            }
+        };
+        console.log(student.getInfo());
+        console.log(typeof(student));
+    </script>
+    
+</body>
+</html>
